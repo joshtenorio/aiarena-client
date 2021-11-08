@@ -71,7 +71,7 @@ VALIDATE_RACE = False
 
 # Override values with environment specific config
 try:
-    from local_config import *
+    from .local_config import *
 except ImportError as e:
     if e.name == "local_config":
         pass

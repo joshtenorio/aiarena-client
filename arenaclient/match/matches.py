@@ -398,13 +398,16 @@ class FileMatchSource(MatchSource):
                 results_log.write(json.dumps(json_object, indent=4))
 
         # remove the played match from the match list
-        # with open(self._matches_file, "r") as match_list:
-        #     lines = match_list.readlines()
+        with open(self._matches_file, "r") as match_list:
+            lines = match_list.readlines()
 
-        # lines[match.id] = '# ' + lines[match.id]
+        for idx in range(len(lines)):
+            if len(lines[idx]) > 0 and lines[idx][0] != '#':
+                lines[idx] = '#' + lines[idx]
+                break
 
-        # with open(self._matches_file, "w") as match_list:
-        #     match_list.writelines(lines)
+        with open(self._matches_file, "w") as match_list:
+            match_list.writelines(lines)
 
 
 class MatchSourceFactory:
