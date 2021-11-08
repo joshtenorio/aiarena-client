@@ -4,7 +4,7 @@ import logging
 import os
 from .client import Client
 # the default config will also import custom config values
-from .configs import default_local_config as cfg
+from .configs import default_config as cfg
 
 logging.getLogger().setLevel(logging.DEBUG)  # Logging needs to be initialized before importing rust_ac
 logging.basicConfig(filename="proxy.log", level=logging.DEBUG, filemode="w+")
