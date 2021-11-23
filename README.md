@@ -1,4 +1,8 @@
 # aiarena-client
+
+## todo
+- [ ] write results to a run file, probably in replays directory
+
 ## Bootstrapping for local play on windows
 The linux steps are probably essentially the same, I just can't guarantee they'd work because I haven't tested it.
 
